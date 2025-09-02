@@ -6,17 +6,48 @@
   <title>Menu</title>
 </head>
 <body>
-  <h1>Full Menu</h1>
-  <ul>
-    <%menu.forEach(item => {%>
-    <li>
-        <h3><%= item.name%></h3>
-        <p> Price: $<%= item.price%></p>
-        <p> Rating: <%= item.rating %> stars</p>
-        <p> Details:<%= item.details%></p>
-    </li>
-    <%})%>  
-  </ul>
+<h1>Full Menu</h1>
+  <h2>Mains</h2>
+<ul>
+  <% menuItems.forEach(item => { %>
+    <% if (item.category === 'mains') { %>
+      <li>
+        <h3><%= item.name %></h3>
+        <p>Price: $<%= item.price %></p>
+        <p>Rating: <%= item.rating %> stars</p>
+        <p>Details: <%= item.details %></p>
+      </li>
+    <% } %>
+  <% }) %>
+</ul>
+
+<h2>Desserts</h2>
+<ul>
+  <% menuItems.forEach(item => { %>
+    <% if (item.category === 'desserts') { %>
+      <li>
+        <h3><%= item.name %></h3>
+        <p>Price: $<%= item.price %></p>
+        <p>Rating: <%= item.rating %> stars</p>
+        <p>Details: <%= item.details %></p>
+      </li>
+    <% } %>
+  <% }) %>
+</ul>
+
+<h2>Sides</h2>
+<ul>
+  <% menuItems.forEach(item => { %>
+    <% if (item.category === 'sides') { %>
+      <li>
+        <h3><%= item.name %></h3>
+        <p>Price: $<%= item.price %></p>
+        <p>Rating: <%= item.rating %> stars</p>
+        <p>Details: <%= item.details %></p>
+      </li>
+    <% } %>
+  <% }) %>
+</ul>
 
 </body>
 </html>
