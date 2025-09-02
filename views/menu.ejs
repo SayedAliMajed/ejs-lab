@@ -7,5 +7,16 @@
 </head>
 <body>
   <h1>Full Menu</h1>
+  <ul>
+    <%menu.forEach(item => {%>
+    <li>
+        <h3><%= item.name%></h3>
+        <p> Price: $<%= item.price%></p>
+        <p> Rating: <%= item.rating %> stars</p>
+        <p> Details:<%= item.details%></p>
+    </li>
+    <%})%>  
+  </ul>
+
 </body>
 </html>
